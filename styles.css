@@ -1,5 +1,3 @@
-/* fonts */
-
 @font-face {
     font-family: "Rubik Bold";
     src: url("./fonts/Rubik-Bold.ttf");
@@ -15,8 +13,6 @@
     src: url("./fonts/Rubik-Regular.ttf");
 }
 
-/* general */
-
 * {
     margin: 0;
     padding: 0;
@@ -26,12 +22,13 @@
 
 .container {
     text-align: center;
+    min-width: 1440px;
     margin: 0 auto;
 }
 
 .button {
     height: 56px;
-    color: white;
+    color: #fff;
     font-size: 16px;
     background-color: rgb(18, 86, 155);
     border-radius: 28px;
@@ -40,27 +37,21 @@
 
 .button:hover {
     cursor: pointer;
-    background-color: rgb(18, 86, 155, 0.8);
+    background-color: rgba(18, 86, 155, 0.8);
 }
 
 .button:active {
-    background-color: rgb(18, 86, 155, 0.7);
+    background-color: rgba(18, 86, 155, 0.7);
 }
 
-.button--header {
+.button__header {
     width: 220px;
 }
 
-.button--bottom {
-    margin-bottom: 4px;
-}
-
-/* header */
-
 .header {
-    height: 570px;
+    height: 500px;
     display: flex;
-    background-color: #e4e6ed;
+    background-color: rgb(228, 230, 237);
     padding: 0 94px;
     margin: 0 auto;
 }
@@ -77,7 +68,8 @@
     margin-top: 44px;
 }
 
-.header__content img {
+.header__icon {
+    display: block;
     margin-bottom: 100px;
 }
 
@@ -85,7 +77,7 @@
     width: 280px;
     font-family: "Rubik Bold";
     font-size: 80px;
-    color: #212033;
+    color: rgb(33, 32, 51);
     line-height: 88%;
     letter-spacing: 14px;
     margin-bottom: 34px;
@@ -95,14 +87,9 @@
     height: 466px;
 }
 
-/* main */
-
 .main {
     position: relative;
     height: 580px;
-    font-size: 12px;
-    padding-top: 30px;
-    padding-bottom: 30px;
     padding: 63px 94px 0 94px;
     margin: 0 auto;
 }
@@ -110,7 +97,7 @@
 .main h2 {
     margin-bottom: 25px;
     font-size: 30px;
-    color: #212033;
+    color: rgb(33, 32, 51);
     letter-spacing: 0.5px;
 }
 
@@ -118,7 +105,7 @@
     display: block;
     width: 710px;
     font-size: 20px;
-    color: #212033;
+    color: rgb(33, 32, 51);
     margin-left: auto;
     margin-right: auto;
 }
@@ -127,7 +114,7 @@
     margin-bottom: 52px;
 }
 
-.main__images{
+.main__images {
     display: flex;
     justify-content: center;
 }
@@ -145,37 +132,35 @@
 .main__images::before {
     position: absolute;
     content: "";
-    background-color: #e4e6ed;
-    height: 99px;
+    background-color: rgb(228, 230, 237);
+    height: 140px;
     width: 90%;
     left: 0;
-    bottom: 138px;
+    bottom: 110px;
     z-index: -1;
 }
 
-/* contribution */
-
-.contribution {
-    height: 370px;
+.pay {
+    height: 400px;
     margin: 0 auto;
     padding: 0 94px;
 }
 
-.contribution h2 {
+.pay h2 {
     font-family: "Rubik Medium";
     font-size: 48px;
-    color: #212033;
+    color: rgb(33, 32, 51);
     letter-spacing: 1px;
     margin-bottom: 45px;
 }
 
-.contribution__form form {
+.pay__form form {
     display: flex;
     width: 822px;
     margin: 0 auto;
 }
 
-.contribution__fonds {
+.pay__fonds {
     display: flex;
     flex-direction: column;
     align-items: start;
@@ -183,7 +168,7 @@
     margin-right: 20px;
 }
 
-.contribution__fonds label {
+.pay__fonds label {
     position: relative;
     height: 44px;
     width: 272px;
@@ -191,11 +176,11 @@
     color: rgb(12, 105, 197);
 }
 
-.contribution__fonds *:first-child {
+.pay__fonds *:first-child {
     margin-bottom: 16px;
 }
 
-.contribution__fonds label:not(:last-of-type) {
+.pay__fonds label:not(:last-of-type) {
     margin-bottom: 12px;
 }
 
@@ -222,65 +207,61 @@ input[type=radio] ~ span {
     cursor: pointer;
 }
 
+
 input[type=radio]:checked ~ span {
-    background-color: rgba(18, 86, 155, 0.20);
+    background-color: rgb(18, 86, 155, 0.2);
 }
 
-input[type=radio] ~ span::after  {
+input[type=radio] ~ span::after {
     content: "";
 }
 
-input[type=radio]:checked ~ span::after   {
+input[type=radio]:checked ~ span::after {
     content: "✓";
-    right: 30px;
+    right: 25px;
     position: absolute;
 }
 
-input[type=tel] {
-    letter-spacing: 1.5px;
-}
-
-.contribution__first-card-col {
+.pay__first-card-col {
     margin-left: 12px;
     margin-right: 16px;
 }
 
-.contribution__first-card-col > div {
+.pay__first-card-col > div {
     display: flex;
     justify-content: space-between;
 }
 
-.contribution__first-card-col > div label {
+.pay__first-card-col > div label {
     display: inline-block;
     width: 118px;
 }
 
-.contribution__first-card-col > div label > input {
+.pay__first-card-col > div label > input {
     margin-top: 6px;
 }
 
-.contribution__second-card-col input {
+.pay__second-card-col input {
     width: 100%;
 }
 
-.contribution__card {
+.pay__card {
     display: flex;
     flex-direction: row;
     width: 530px;
 }
 
-.contribution__card > * {
+.pay__card > * {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
-.contribution__card label {
+.pay__card label {
     text-align: left;
 }
 
-
-.contribution__card label > input {
+.pay__card label > input {
     height: 60px;
     width: 100%;
     border-radius: 12px;
@@ -288,17 +269,15 @@ input[type=tel] {
     margin-top: 12px;
 }
 
-/* footer */
-
 footer {
-    height: 163px;
-    font-size: 20px;
-    color: white;
+    height: 150px;
+    font-size: 18px;
+    color: #fff;
     background-color: rgb(18, 86, 155);
     padding-top: 50px;
 }
 
 footer *:first-child {
-    letter-spacing: 3.1px;
+    letter-spacing: 3px;
     margin-bottom: 23px;
 }
