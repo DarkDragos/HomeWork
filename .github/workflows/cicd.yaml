@@ -18,4 +18,4 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: ghrc.io/darkdragos/homework:latest  
+          tags: ghcr.io/darkdragos/homework:latest  
