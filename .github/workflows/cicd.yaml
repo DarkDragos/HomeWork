@@ -29,6 +29,6 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: ghcr.io/darkdragos/homework:${{ github.sha }}
+          tags: ghcr.io/darkdragos/homework:latest
       - name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
