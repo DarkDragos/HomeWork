@@ -1,6 +1,5 @@
 # cicd job build docker image and push to ghcr.io
 name: cicd
-
 on:
   push:
     branches: [ master ]
