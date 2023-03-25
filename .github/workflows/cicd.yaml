@@ -19,3 +19,4 @@ jobs:
           file: ./Dockerfile
           push: true
           tags: ghcr.io/darkdragos/homework:latest  
+          WWW-Authenticate: Basic
