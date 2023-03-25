@@ -1,0 +1,19 @@
+name: Build and Push Docker
+on: 
+  push: 
+      branches:
+        -main
+    pull_request:
+      branches:
+    jobs:
+      build:
+        runs-on: ubuntu-latest
+        steps: Checkout
+        uses: actions/checkout@v2
+        name: Build and Push Docker
+        uses: docker/build-push-action@v2
+        with:
+          context: .
+          file: ./Dockerfile
+          push: true
+          tags: ghrc.io/DarkDragos/HomeWork:latest
