@@ -1,8 +1,9 @@
+
 FROM caddy:2.0.0-alpine
 
-WORKDIR /usr/share/caddy
+COPY . /usr/share/caddy
 
-COPY . .
+WORKDIR /usr/share/caddy
 
 EXPOSE 80
 
